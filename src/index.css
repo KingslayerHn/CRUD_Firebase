@@ -11,9 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.App{
-  background-image: url('./images/bg-image.jpg');
+.App {
+  display: flex;
+  background-image: url("./images/bg-image.jpg");
   background-size: cover;
   width: 100vw;
   height: 100vh;
 }
+
+.card-notes {
+  height: 100vh;
+}
+
+.card-note {
+  width: 180px;
+  height: 200px;
+}
+
+
