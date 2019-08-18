@@ -32,9 +32,10 @@ code {
   justify-content: end !important;
 }
 
-.badge{
+.card-body .badge{
   border: none !important;
   position: absolute;
   right: 3px;
   top: 3px;
 }
+

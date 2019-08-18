@@ -3,6 +3,10 @@
         {
             "title" : "Compiladores",
             "description": "Primer avance"
+        },
+        {
+            "title" : "sistemas operativos",
+            "description" : "instalar maquinas virtuales de linux y windows"
         }
     ]
 }

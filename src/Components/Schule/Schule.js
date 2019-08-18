@@ -8,6 +8,7 @@ export default class Schule extends Component {
       description: ""
     };
     this.changeState = this.changeState.bind(this);
+    this.newNote = this.newNote.bind(this);
   }
 
   changeState(e) {
@@ -17,11 +18,18 @@ export default class Schule extends Component {
     });
     console.log(this.state);
   }
+  newNote(e) {
+    e.preventDefault();
+    this.props.addNewNote(this.state);
+  }
+  removeNote(index) {
+
+  }
 
   render() {
     return (
       <div className="card">
-        <div className="card-body">
+        <form className="card-body" onSubmit={this.newNote}>
           <h5 className="card-title text-center">Notes</h5>
           <div className="form-group">
             <input
@@ -40,17 +48,20 @@ export default class Schule extends Component {
               name="description"
               onChange={this.changeState}
             />
+            <button
+              className="btn btn-primary m-1 font-weight-bold"
+              onClick={gettext}
+            >
+              Add
+            </button>
+            <button
+              className="btn btn-success font-weight-bold"
+              onClick={erase}
+            >
+              Clean
+            </button>
           </div>
-          <button
-            className="btn btn-primary m-1 font-weight-bold"
-            onClick={gettext}
-          >
-            Add
-          </button>
-          <button className="btn btn-success font-weight-bold" onClick={erase}>
-            Clean
-          </button>
-        </div>
+        </form>
       </div>
     );
   }
