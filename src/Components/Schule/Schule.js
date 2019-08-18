@@ -18,14 +18,10 @@ export default class Schule extends Component {
     console.log(this.state);
   }
 
-  sendForm(e) {
-    e.preventDefault();
-  }
-  
   render() {
     return (
       <div className="card">
-        <div className="card-body" onSubmit={sendForm}>
+        <div className="card-body">
           <h5 className="card-title text-center">Notes</h5>
           <div className="form-group">
             <input
