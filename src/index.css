@@ -28,4 +28,13 @@ code {
   height: 200px;
 }
 
+.navbar {
+  justify-content: end !important;
+}
 
+.badge{
+  border: none !important;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
