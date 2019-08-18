@@ -22,9 +22,7 @@ export default class Schule extends Component {
     e.preventDefault();
     this.props.addNewNote(this.state);
   }
-  removeNote(index) {
-
-  }
+  removeNote(index) {}
 
   render() {
     return (
@@ -54,22 +52,12 @@ export default class Schule extends Component {
             >
               Add
             </button>
-            <button
-              className="btn btn-success font-weight-bold"
-              onClick={erase}
-            >
-              Clean
-            </button>
           </div>
         </form>
       </div>
     );
   }
 }
-
-var erase = () => {
-  document.getElementById("notes-text").value = " ";
-};
 
 var gettext = () => {
   var text = document.getElementById("notes-text").value;

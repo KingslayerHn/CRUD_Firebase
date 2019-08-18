@@ -65,6 +65,3 @@ export default class App extends Component {
     );
   }
 }
-var test = () => {
-  
-};
