@@ -5,7 +5,10 @@ export default class Note extends Component {
     return (
       <div className="card card-note m-2">
         <div className="card-body">
-          <button className="badge badge-danger " onClick={test}>X</button>
+          <button className="badge badge-danger " onClick={test}>
+            X
+          </button>
+          
         </div>
       </div>
     );
@@ -13,7 +16,6 @@ export default class Note extends Component {
 }
 
 var test = () => {
-  if(window.confirm('Are you sure to delete it?')){
-
+  if (window.confirm("Are you sure to delete it?")) {
   }
-}
+};

@@ -1,19 +1,56 @@
 import React, { Component } from "react";
 
 export default class Schule extends Component {
+  constructor() {
+    super();
+    this.state = {
+      title: "",
+      description: ""
+    };
+    this.changeState = this.changeState.bind(this);
+  }
+
+  changeState(e) {
+    const { value, name } = e.target;
+    this.setState({
+      [name]: value
+    });
+    console.log(this.state);
+  }
+
+  sendForm(e) {
+    e.preventDefault();
+  }
+  
   render() {
     return (
       <div className="card">
-        <div className="card-body">
+        <div className="card-body" onSubmit={sendForm}>
           <h5 className="card-title text-center">Notes</h5>
           <div className="form-group">
+            <input
+              type="text"
+              className="form-control mb-2"
+              id="title-input"
+              placeholder="Add title"
+              name="title"
+              onChange={this.changeState}
+            />
             <textarea
               id="notes-text"
               className="form-control rounded-0"
               rows="10"
+              placeholder="Add description"
+              name="description"
+              onChange={this.changeState}
             />
           </div>
-          <button className="btn btn-primary m-1 font-weight-bold">Add</button>
+          <button
+            className="btn btn-primary m-1 font-weight-bold"
+            onClick={gettext}
+          >
+            Add
+          </button>
           <button className="btn btn-success font-weight-bold" onClick={erase}>
             Clean
           </button>
@@ -27,3 +64,6 @@ var erase = () => {
   document.getElementById("notes-text").value = " ";
 };
 
+var gettext = () => {
+  var text = document.getElementById("notes-text").value;
+};
